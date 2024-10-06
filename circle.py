@@ -10,7 +10,6 @@ def area(r):
      '''
     return math.pi * r * r
 
-
 def perimeter(r):
     '''
        Возвращает периметр окружности
