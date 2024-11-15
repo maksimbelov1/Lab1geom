@@ -1,0 +1,37 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches:
+      - new_465187
+
+jobs:
+  test-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Run tests
+        run: |
+          python -m unittest test_shapes.py
+
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Run tests
+        run: |
+          python -m unittest test_shapes.py 
