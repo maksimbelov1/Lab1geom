@@ -19,7 +19,7 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest test_shapes.py
+          python -m unittest docs/tests.py
 
   test-windows:
     runs-on: windows-latest
@@ -34,4 +34,4 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest test_shapes.py 
+          python -m unittest docs/tests.py 
